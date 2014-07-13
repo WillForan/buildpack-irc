@@ -11,9 +11,11 @@ Set the build pack URL
 
 `heroku config:set BUILDPACK_URL=https://github.com/j-mcnally/buildpack-irc`
 
-Create and ircd.conf in your heroku app's bircd folder
+Create an ircd.conf in your heroku app's bircd folder
 
 ```
+# filename: bircd/ircd.conf
+
 # servername::server description::numeric. 
 # change numeric to something unique on the network
 
