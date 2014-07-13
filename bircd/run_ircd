@@ -1,3 +1,4 @@
+cd /bircd
 bircd 
 ps aux
 export IRCPID=$!

@@ -1,1 +1,1 @@
-worker: ./sockets-connect/rs-conn -b 6667 ./run_ircd 
+worker: rs-conn -b 6667 run_ircd 
