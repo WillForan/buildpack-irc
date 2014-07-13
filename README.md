@@ -83,3 +83,7 @@ It may also work for small team collaboration.
 
 Ruppells-sockets only support a free 50mb/day plan right now so that may be a limiting factor.
 
+The irc server runs on worker so make sure that you
+
+`heroku ps:scale web=0; heroku ps:scale worker=1`
+
