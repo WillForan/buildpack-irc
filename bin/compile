@@ -1,5 +1,4 @@
 #!/bin/bash
-cd ../deploy
-ls
-cp -R ../bircd/ $1/bircd/
-cp -R ../sockets-connect/ $1/sockets-connect/
+DIR="$( cd "$( dirname "$0" )" && pwd )"
+cp -R $DIR../bircd/ $1/bircd/
+cp -R $DIR../sockets-connect/ $1/sockets-connect/
