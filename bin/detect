@@ -1,7 +1,7 @@
 #!/bin/sh
 
 # this pack is valid for apps with a hello.txt in the root
-if [ -f $1/bircd/bircd ]; then
+if [ -f $1/bircd/ircd.conf ]; then
   echo "BewareICRD"
   exit 0
 else

@@ -1,0 +1,9 @@
+bircd 
+ps aux
+export IRCPID=$!
+echo "waiting for bircd ($IRCPID) to exit......."
+while [ -e /proc/$IRCPID ]
+do
+    echo "$IRCPID is running"
+    sleep 600
+done
