@@ -1,5 +1,5 @@
 #!/bin/bash
-cd ../buildpacks
+cd ../deploy
 ls
 cp -R ../bircd/ $1/bircd/
 cp -R ../sockets-connect/ $1/sockets-connect/
