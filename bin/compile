@@ -1,4 +1,6 @@
 #!/bin/bash
+CURDIR=$PWD
 DIR="$( cd "$( dirname "$0" )" && pwd )"
-cp -R $DIR../bircd/ $1/bircd/
-cp -R $DIR../sockets-connect/ $1/sockets-connect/
+cd $DIR; cp -R ../bircd/ $1/bircd/
+cd $DIR; cp -R ../sockets-connect/ $1/sockets-connect/
+cd $CURDIR
