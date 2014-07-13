@@ -1,2 +1,0 @@
-config_vars:
-  PATH: "bircd:sockets-connect:/usr/bin:/bin"

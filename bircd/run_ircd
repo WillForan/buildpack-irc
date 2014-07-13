@@ -1,5 +1,4 @@
-cd /bircd
-bircd 
+./bircd 
 ps aux
 export IRCPID=$!
 echo "waiting for bircd ($IRCPID) to exit......."
