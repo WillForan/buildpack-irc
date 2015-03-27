@@ -1,0 +1,10 @@
+#!/bin/sh
+
+cat << EOF
+--
+addons:
+  - ruppells-sockets
+default_process_types:
+  worker: ./sockets-connect/rs-conn -b 6667 ./bircd/run_ircd 
+EOF
+
