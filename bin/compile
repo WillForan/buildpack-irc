@@ -15,7 +15,7 @@ SCRIPT_DIR="$( cd "$( dirname "$0" )"; pwd )"
 # we need russells socket's rs-con 
 echo "copying russells sockets rs-conn"
 mkdir -p $BUILD_DIR/sockets-connect
-cp $SCRIPT_DIR/../sockets-connect/rs-conn $BUILD_DIR/sockets-connect/
+cp $SCRIPT_DIR/../lib/sockets-connect/rs-conn $BUILD_DIR/sockets-connect/
 
 # copy bircd bin and configs
 echo "copying bircd"

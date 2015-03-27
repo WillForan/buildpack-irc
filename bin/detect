@@ -1,8 +1,10 @@
 #!/bin/sh
 
 BUILD_DIR=$1
-configfile=$BUILD_DIR/bircd/ircd.conf 
 # this pack is valid for apps that have configed ircd.conf
+configfile=$BUILD_DIR/bircd/ircd.conf 
+
+echo "looking for $configfile"
 if [ -f $configfile ]; then
   echo "BewareICRD"
   exit 0
