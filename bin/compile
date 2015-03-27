@@ -1,12 +1,25 @@
 #!/bin/bash
 
+trap '[ "$?" -ne 0 ] && echo "$0 ended with error!"' EXIT
+
 # Lots of hackery to pull files from the buildpack and add them to the build direcotry?
 # Is there a cleaner way?
+BUILD_DIR=$1
+CAHCE_DIR=$2
+ENV_DIR=$3
 
-CURDIR=$PWD
-DIR="$( cd "$( dirname "$0" )" && pwd )"
-cd $DIR; cp -R ../bircd/* $1/bircd/
-mkdir -p $1/sockets-connect
-cd $DIR; cp -R ../sockets-connect/* $1/sockets-connect/
-cd $DIR; cp ../Procfile $1/Procfile
+
+CURDIR=$(pwd)
+SCRIPT_DIR="$( cd "$( dirname "$0" )"; pwd )"
+
+# we need russells socket's rs-con 
+echo "copying russells sockets rs-conn"
+mkdir -p $BUILD_DIR/sockets-connect
+cp $SCRIPT_DIR/../sockets-connect/rs-conn $BUILD_DIR/sockets-connect/
+
+# copy bircd bin and configs
+echo "copying bircd"
+cp -R $SCRIPT_DIR/../bircd $BUILD_DIR/bircd
+cp $SCRIPT_DIR/../Procfile $BUILD_DIR/Procfile
+
 cd $CURDIR
