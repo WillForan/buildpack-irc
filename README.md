@@ -9,9 +9,25 @@ Requires ruppell's sockets
 
 Set the build pack URL
 
-`heroku config:set BUILDPACK_URL=https://github.com/j-mcnally/buildpack-irc`
+`heroku buildpack:set https://github.com/j-mcnally/buildpack-irc`
 
 Create an ircd.conf in your heroku app's bircd folder
+
+```bash
+# get
+git clone git@github.com:j-mcnally/buildpack-irc.git
+cd buildpack-irc
+
+# configure
+xclip -o > bircd/ircd.conf # after selecting text below
+vim $_
+
+# app-ize
+heroku create
+heroku addons:add ruppells-sockets
+heroku buildpack:set https://github.com/j-mcnally/buildpack-irc
+```
+
 
 ```
 # filename: bircd/ircd.conf
